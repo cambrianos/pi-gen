@@ -1,0 +1,14 @@
+name: Build Cambrian OS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: usimd/pi-gen-action@v1
+        with:
+          image-name: CambrianOS
+          stage-list: stage0 stage1 stage2 stage3 stage4
