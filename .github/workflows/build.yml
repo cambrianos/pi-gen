@@ -12,7 +12,7 @@ jobs:
         id: build
         with:
           image-name: CambrianOS
-          stage-list: stage0 stage1 stage2 stage3 stage4
+          stage-list: stage0 stage1 stage2 stage3 stage-cambrian stage4
       - uses: actions/upload-artifact@v4
         with:
           name: CambrianOS-image
