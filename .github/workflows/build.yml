@@ -25,7 +25,6 @@ jobs:
           enable-ssh: 1
           enable-cloud-init: 0
           compression: xz
-          increase-runner-disk-size: true
       - uses: actions/upload-artifact@v4
         with:
           name: CambrianOS-image
