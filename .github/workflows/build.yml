@@ -12,7 +12,20 @@ jobs:
         id: build
         with:
           image-name: CambrianOS
-          stage-list: stage0 stage1 stage2 stage3 stage-cambrian stage4
+          pi-gen-version: master
+          release: trixie
+          stage-list: stage0 stage1 stage2 stage3 ./stage-cambrian stage4
+          locale: en_US.UTF-8
+          timezone: Asia/Kolkata
+          keyboard-layout: English (US)
+          keyboard-keymap: us
+          wpa-country: IN
+          username: cambrian
+          password: cambrian
+          enable-ssh: 1
+          enable-cloud-init: 0
+          compression: xz
+          increase-runner-disk-size: true
       - uses: actions/upload-artifact@v4
         with:
           name: CambrianOS-image
